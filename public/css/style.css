@@ -2518,6 +2518,9 @@ textarea {
 | 21. Add listing Style
 |----------------------------------------------------------------------------
 */
+.add-listing-section{
+  padding-top: 150px;
+}
 input::-webkit-input-placeholder {
   color: rgba(17, 17, 17, 0.44); }
 input:-ms-input-placeholder {
@@ -2545,7 +2548,6 @@ input:-moz-placeholder {
 
 .form-single-element {
   margin-bottom: 10px; }
-
 .add-listing-form.form-common .form-group {
   margin: 0 0 17px 0; }
   .add-listing-form.form-common .form-group label {

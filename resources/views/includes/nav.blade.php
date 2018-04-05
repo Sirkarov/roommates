@@ -3,7 +3,7 @@
         <a href="login" class="user-login-btn border-btn">
             <i class="fa fa-user-o" aria-hidden="true"></i> Log in
         </a>
-        <a href="add-listing.html" class="user-addlisting-btn">
+        <a href="add-listing" class="user-addlisting-btn">
             <i class="fa fa-plus" aria-hidden="true"></i> Add Listing
         </a>
     </div>
@@ -11,7 +11,7 @@
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
             <i class="fa fa-bars navbar-toggle-btn" aria-hidden="true"></i>
         </button>
-        <a class="navbar-brand" href="home-one.html">
+        <a class="navbar-brand" href="/">
             <img src="images/logo.png" alt="img" class="img-responsive">
         </a>
         <div class="collapse navbar-collapse justify-content-end" id="navbarCollapse">
