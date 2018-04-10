@@ -2,8 +2,8 @@
     <div class="container">
         <div class="header-content-block">
             <div class="header-title-block">
-                <h2>Explore Your City</h2>
-                <p>Discover what makes feel better nearest you.</p>
+                <h2>Најди го твојот Цимер</h2>
+                <p>Пронајди некој што ќе биде најдобар цимер!</p>
             </div>
             <form class="form-common filter-form filter-header-form">
                 <div class="form-group outer-select-field">
@@ -31,23 +31,6 @@
                     </button>
                 </div>
             </form>
-            <p class="listing-promote-text">
-                Or Add & Promote your own listing and see what’s happening around you.
-            </p>
-            <div class="listing-promote-steps">
-                <div class="listing-promote-block">
-                    <span class="ti-user"></span>
-                    <p>Register</p>
-                </div>
-                <div class="listing-promote-block">
-                    <span class="ti-pencil-alt"></span>
-                    <p>Create Listing</p>
-                </div>
-                <div class="listing-promote-block">
-                    <span class="ti-announcement"></span>
-                    <p>Publish</p>
-                </div>
-            </div>
         </div>
         <!-- header-content-block -->
     </div>
