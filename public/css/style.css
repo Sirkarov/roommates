@@ -432,6 +432,7 @@ input:not([type=submit]):not([type=radio]):not([type=checkbox]):focus, select:fo
 /*---------------------------------------
 2. Main header Style
 ---------------------------------------*/
+
 .navbar-brand {
   position: relative;
   left: 60px; }
