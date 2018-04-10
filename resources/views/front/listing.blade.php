@@ -1,4 +1,4 @@
 @extends('master')
 @section('content')
-    <h1>Helllooo</h1>
+    <h1>Hellloooo</h1>
     @endsection
