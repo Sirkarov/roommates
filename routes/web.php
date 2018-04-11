@@ -18,3 +18,4 @@ Route::get('/register', 'Front\RegisterController@register');
 Route::get('/listing', 'Front\ListingController@listings');
 
 Route::get('/admin', 'Admin\IndexController@home');
+Route::get('/admin/user', 'Admin\UserController@index');
