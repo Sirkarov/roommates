@@ -10,9 +10,9 @@ class UserController extends Controller
 {
     public function index()
     {
-       $data = DB::table('users')->get();
+     /*  $data = DB::table('users')->get();
 
-        var_dump($data);
+        var_dump($data);*/
 
         return view('admin/user/list');
     }
