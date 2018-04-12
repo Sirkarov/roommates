@@ -8,7 +8,6 @@
                 <div class="small-box bg-aqua">
                     <div class="inner">
                         <h3>150</h3>
-
                         <p>New Orders</p>
                     </div>
                     <div class="icon">
@@ -103,7 +102,7 @@
                     <div class="box-body chat" id="chat-box">
                         <!-- chat item -->
                         <div class="item">
-                            <img src="assets/admin/dist/img/user4-128x128.jpg" alt="user image" class="online">
+                            <img src="{{asset('assets/admin/dist/img/user4-128x128.jpg')}}" alt="user image" class="online">
 
                             <p class="message">
                                 <a href="#" class="name">
@@ -130,7 +129,7 @@
                         <!-- /.item -->
                         <!-- chat item -->
                         <div class="item">
-                            <img src="assets/admin/dist/img/user3-128x128.jpg" alt="user image" class="offline">
+                            <img src="{{asset('assets/admin/dist/img/user3-128x128.jpg')}}" alt="user image" class="offline">
 
                             <p class="message">
                                 <a href="#" class="name">
@@ -145,7 +144,7 @@
                         <!-- /.item -->
                         <!-- chat item -->
                         <div class="item">
-                            <img src="assets/admin/dist/img/user2-160x160.jpg" alt="user image" class="offline">
+                            <img src="{{asset('assets/admin/dist/img/user2-160x160.jpg')}}" alt="user image"  class="offline">
 
                             <p class="message">
                                 <a href="#" class="name">
@@ -500,6 +499,5 @@
             <!-- right col -->
         </div>
         <!-- /.row (main row) -->
-
     </section>
     @endsection

@@ -8,16 +8,16 @@
     <!-- google fonts -->
     <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet" type='text/css'>
 
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/themify-icons.css">
-    <link rel="stylesheet" href="assets/css/simple-line-icons.css">
-    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
-    <link rel="stylesheet" href="assets/css/jquery-ui.min.css">
-    <link rel="stylesheet" href="assets/css/magnific-popup.css">
+    <link rel="stylesheet" href={{asset('assets/css/bootstrap.min.css')}}>
+    <link rel="stylesheet" href={{asset('assets/css/themify-icons.css')}}>
+    <link rel="stylesheet" href={{asset('assets/css/simple-line-icons.css')}}>
+    <link rel="stylesheet" href={{asset('assets/css/font-awesome.min.css')}}>
+    <link rel="stylesheet" href={{asset('assets/css/jquery-ui.min.css')}}>
+    <link rel="stylesheet" href={{asset('assets/css/magnific-popup.css')}}>
 
     <!-- BX Slider CSS -->
-    <link rel="stylesheet" href="assets/css/jquery.bxslider.css">
+    <link rel="stylesheet" href={{asset('assets/css/jquery.bxslider.css')}}>
 
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href={{asset('css/style.css')}}>
 
-    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href={{asset('css/responsive.css')}}>

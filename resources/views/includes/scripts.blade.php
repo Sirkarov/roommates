@@ -1,17 +1,17 @@
-<script src="assets/js/jquery-3.2.1.min.js"></script>
-<script src="assets/js/tether.min.js"></script>
-<script src="assets/js/bootstrap.min.js"></script>
-<script src="assets/js/jquery.bxslider.js"></script>
-<script src="assets/js/jquery.magnific-popup.min.js"></script>
-<script src="assets/js/jquery.ajaxchimp.min.js"></script>
-<script src="assets/js/jquery-ui.min.js"></script>
-<script src="assets/js/jquery.waypoints.min.js"></script>
-<script src="assets/js/jquery.counterup.min.js"></script>
-<script src="assets/js/lobipanel.min.js"></script>
-<script src="assets/js/jquery.accordion.js"></script>
-<script src="assets/js/jquery.slimscroll.min.js"></script>
+<script src="{{asset('assets/js/jquery-3.2.1.min.js')}}"></script>
+<script src="{{asset('assets/js/tether.min.js')}}"></script>
+<script src="{{asset('assets/js/bootstrap.min.js')}}"></script>
+<script src="{{asset('assets/js/jquery.bxslider.js')}}"></script>
+<script src="{{asset('assets/js/jquery.magnific-popup.min.js')}}"></script>
+<script src="{{asset('assets/js/jquery.ajaxchimp.min.js')}}"></script>
+<script src="{{asset('assets/js/jquery-ui.min.js')}}"></script>
+<script src="{{asset('assets/js/jquery.waypoints.min.js')}}"></script>
+<script src="{{asset('assets/js/jquery.counterup.min.js')}}"></script>
+<script src="{{asset('assets/js/lobipanel.min.js')}}"></script>
+<script src="{{asset('assets/js/jquery.accordion.js')}}"></script>
+<script src="{{asset('assets/js/jquery.slimscroll.min.js')}}"></script>
 <!-- Tinymce-JS -->
-<script src="assets/js/tinymce/tinymce.min.js"></script>
+<script src={{asset('assets/js/tinymce/tinymce.min.js')}}></script>
 <!-- Google-map -->
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAmiJjq5DIg_K9fv6RE72OY__p9jz0YTMI"></script>
 <script src="js/custom.js"></script>

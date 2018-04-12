@@ -14,6 +14,6 @@ class UserController extends Controller
 
         var_dump($data);*/
 
-        return view('admin/user/list');
+        return view('admin.user.list');
     }
 }
