@@ -4,16 +4,16 @@ namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+
+use App\Models\User;
 use DB;
+use View;
 
 class UserController extends Controller
 {
-    public function index()
+    public function user()
     {
-     /*  $data = DB::table('users')->get();
-
-        var_dump($data);*/
-
-        return view('admin.user.list');
+        $data['users'] = User::all();
+        return View::make('admin.user.list', $data);
     }
 }
