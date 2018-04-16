@@ -1,7 +1,7 @@
 <aside class="main-sidebar">
     <!-- sidebar: style can be found in sidebar.less -->
     <section class="sidebar">
-        <!-- Sidebar user panel -->
+        <!-- Sidebar users panel -->
         <div class="user-panel">
             <div class="pull-left image">
                 <img src={{asset('assets/admin/dist/img/user2-160x160.jpg')}} class="img-circle" alt="User Image">
@@ -25,8 +25,20 @@
         <!-- sidebar menu: : style can be found in sidebar.less -->
         <ul class="sidebar-menu" data-widget="tree">
             <li class="header">MAIN NAVIGATION</li>
-            <li><a href={{asset('admin/user')}}><i class="fa fa-user"></i> <span>User</span></a></li>
-            <li><a href={{asset('admin/advertisement')}}><i class="fa fa-book"></i> <span>Advertisement</span></a></li>
+            <li class="active treeview menu-open">
+                <a href="#">
+                    <i class="fa fa-user"></i> <span>Manage Users</span>
+                    <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+                </a>
+                <ul class="treeview-menu" style="">
+                    <li><a href={{asset('admin/users')}}><i class="fa fa-user"></i> <span>View Users</span></a></li>
+                    <li><a href={{asset('admin/users/add')}}><i class="fa fa-user"></i> <span>Add Users</span></a></li>
+                </ul>
+            </li>
+            <li><a href={{asset('admin/advertisements')}}><i class="fa fa-book"></i> <span>Advertisement</span></a></li>
+            <li><a href={{asset('admin/characteristics')}}><i class="fa fa-book"></i> <span>Characterisics</span></a></li>
 
         </ul>
     </section>

@@ -2,12 +2,15 @@
 @section('content')
 <div class="box">
 <div class="box-header">
-    <h3 class="box-title">Data Table With Full Features</h3>
+    <h3 class="box-title">Users Table</h3>
 </div>
 <!-- /.box-header -->
 <div class="box-body">
     <div id="example1_wrapper" class="dataTables_wrapper form-inline dt-bootstrap">
-        <div class="row"><div class="col-sm-12"><table id="example1" class="table table-bordered table-striped dataTable" role="grid" aria-describedby="example1_info">
+        <div class="row">
+            <div class="col-sm-1"><a class="btn btn-success" href={{asset('/admin/users/add')}}>Add New User</a></div>
+            <div class="col-sm-12">
+                <table id="example1" class="table table-bordered table-striped dataTable" role="grid" aria-describedby="example1_info">
                     <thead>
                     <tr role="row">
                         <th class="sorting_asc" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Rendering engine: activate to sort column descending" style="width: 297px;">ID</th>

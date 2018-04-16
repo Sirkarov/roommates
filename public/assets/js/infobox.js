@@ -281,7 +281,7 @@ InfoBox.prototype.addClickHandler_ = function () {
 };
 
 /**
- * Returns the function to call when the user clicks the close box of an InfoBox.
+ * Returns the function to call when the users clicks the close box of an InfoBox.
  * @private
  */
 InfoBox.prototype.getCloseClickHandler_ = function () {

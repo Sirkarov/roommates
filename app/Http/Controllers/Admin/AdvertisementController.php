@@ -9,9 +9,9 @@ use View;
 use DB;
 class AdvertisementController extends Controller
 {
-    public function advert()
+    public function list()
     {
-        $data['advertisements'] = Advertisement::all();
-        return View::make('admin.advertisement.list',$data);
+        $advertisements = Advertisement::all();
+        return view('admin.advertisements.list',compact("advertisements"));
     }
 }
