@@ -52,3 +52,4 @@
         google.maps.event.trigger(map, 'resize');
     });
 </script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>

@@ -3,7 +3,7 @@
 <script src={{asset('assets/admin/bower_components/jquery-ui/jquery-ui.min.js')}}></script>
 <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
 <script>
-    $.widget.bridge('uibutton', $.ui.button);
+$.widget.bridge('uibutton', $.ui.button);
 </script>
 <!-- Bootstrap 3.3.7 -->
 <script src={{asset('assets/admin/bower_components/bootstrap/dist/js/bootstrap.min.js')}}></script>
@@ -38,15 +38,46 @@
 <!-- AdminLTE for demo purposes -->
 <script src={{asset('assets/admin/dist/js/demo.js')}}></script>
 <script>
-    $(function () {
-        $('#example1').DataTable()
-        $('#example2').DataTable({
-            'paging'      : true,
-            'lengthChange': false,
-            'searching'   : false,
-            'ordering'    : true,
-            'info'        : true,
-            'autoWidth'   : false
-        })
+$(function () {
+    $('#example1').DataTable()
+    $('#example2').DataTable({
+        'paging'      : true,
+        'lengthChange': false,
+        'searching'   : false,
+        'ordering'    : true,
+        'info'        : true,
+        'autoWidth'   : false
     })
+})
+</script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script>
+$('#example1').delegate('.sa-warning', 'click',function(){
+var url = $(this).data('url');
+var token = $(this).data('token');
+var id = $(this).data('id');
+var close = $(this).closest('tr');
+var question = $(this).data('question');
+swal({
+title: "Дали сте сигурни?",
+text: "Нема да можете да го вратите <b style='color:red;'>("+question+")</b>",
+type: "warning",
+html:true,
+showCancelButton: true,
+confirmButtonColor: "#DD6B55",
+confirmButtonText: "Да, избриши го!",
+cancelButtonText: "Не, откажи!",
+closeOnConfirm: false
+}, function(){
+$.ajax({
+url : url,
+type : 'post',
+data : {_token:token,id: id},
+success : function(response){
+close.fadeOut(500);
+swal("Избришано!", "Успешно е избришано.", "success");
+}
+});
+});
+});
 </script>

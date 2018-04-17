@@ -29,4 +29,9 @@ class CharacteristicController extends Controller
         #And redirect somewhere in the application
         return redirect('admin/characteristics')->with(['success'=>'succesfully added']);
     }
+    public function destroy($id){
+        $characteristic=Characteristic::findOrFail($id);
+        $characteristic->delete();
+        return redirect(route('admin.characteristics.list'));
+    }
 }

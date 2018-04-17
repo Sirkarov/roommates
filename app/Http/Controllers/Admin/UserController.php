@@ -33,9 +33,10 @@ class UserController extends Controller
         $user->phone = $request->get('phone');
         $user->description = $request->get('description');
 
-
+        #Save it to the database
         $user->save();
 
+        #And redirect somewhere in the application
         return redirect('admin/users')->with(['success'=>'succesfully added']);
     }
 
