@@ -13,7 +13,12 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.'], function(){
     #Advertisement routes
     Route::get('advertisements', 'Admin\AdvertisementController@list');
 
+    
 
-    Route::get('characteristics', 'Admin\CharacteristicController@index');
+    #Characteristics routes
+    Route::group(['prefix' => 'characteristics', 'as' => 'characteristics.'],function(){
+        Route::get('/', 'Admin\CharacteristicController@index');
+        Route::get('create', 'Admin\CharacteristicController@create');
+    });
 
 });

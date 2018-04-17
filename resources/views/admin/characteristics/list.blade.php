@@ -7,7 +7,7 @@
             <!-- /.box-header -->
             <div class="box-body">
                 <table class="table table-bordered">
-
+                    <div class="col-sm-1"><a class="btn btn-success" href={{asset('/admin/characteristics/create')}}>Add New User</a></div>
                     <thead><tr>
                         <th style="width: 10px">ID</th>
                         <th>Карактеристика</th>
