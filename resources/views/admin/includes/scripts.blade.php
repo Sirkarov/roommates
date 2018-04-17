@@ -38,7 +38,7 @@ $.widget.bridge('uibutton', $.ui.button);
 <!-- AdminLTE for demo purposes -->
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 <script>
-    swal("Hello James,Thanks for Advice!");
+    swal("Hello World");
 </script>
 <!-- Sweet Alert -->
 <script src={{asset('assets/admin/dist/js/demo.js')}}></script>
