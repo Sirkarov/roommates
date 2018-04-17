@@ -14,4 +14,8 @@ class AdvertisementController extends Controller
         $advertisements = Advertisement::all();
         return view('admin.advertisements.list',compact("advertisements"));
     }
+    public function create()
+    {
+        return view('admin/advertisements/create');
+    }
 }

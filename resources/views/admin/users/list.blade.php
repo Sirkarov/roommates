@@ -8,7 +8,7 @@
 <div class="box-body">
     <div id="example1_wrapper" class="dataTables_wrapper form-inline dt-bootstrap">
         <div class="row">
-            <div class="col-sm-1"><a class="btn btn-success" href={{asset('/admin/users/add')}}>Add New User</a></div>
+            <div class="col-sm-1"><a class="btn btn-success" href={{asset('/admin/users/create')}}>Add New User</a></div>
             <div class="col-sm-12">
                 <table id="example1" class="table table-bordered table-striped dataTable" role="grid" aria-describedby="example1_info">
                     <thead>

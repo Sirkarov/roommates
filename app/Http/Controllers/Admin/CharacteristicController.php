@@ -19,4 +19,14 @@ class CharacteristicController extends Controller
     {
         return view('admin/characteristics/create');
     }
+    public function store(Request $request)
+    {
+        #Create new Characteristic
+        $characteristic = new Characteristic;
+        $characteristic->characteristic = $request->get('name_characteristic');
+        #Save it to the database
+        $characteristic->save();
+        #And redirect somewhere in the application
+        return redirect('admin/characteristics')->with(['success'=>'succesfully added']);
+    }
 }

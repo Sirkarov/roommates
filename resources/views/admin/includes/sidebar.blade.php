@@ -34,11 +34,33 @@
                 </a>
                 <ul class="treeview-menu" style="">
                     <li><a href={{asset('admin/users')}}><i class="fa fa-user"></i> <span>View Users</span></a></li>
-                    <li><a href={{asset('admin/users/add')}}><i class="fa fa-user"></i> <span>Add Users</span></a></li>
+                    <li><a href={{asset('admin/users/create')}}><i class="fa fa-user"></i> <span>Create User</span></a></li>
                 </ul>
             </li>
-            <li><a href={{asset('admin/advertisements')}}><i class="fa fa-book"></i> <span>Advertisement</span></a></li>
-            <li><a href={{asset('admin/characteristics')}}><i class="fa fa-book"></i> <span>Characterisics</span></a></li>
+            <li class="active treeview menu-open">
+                <a href="#">
+                    <i class="fa fa-book"></i> <span>Manage Advertisements</span>
+                    <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+                </a>
+                <ul class="treeview-menu" style="">
+                    <li><a href={{asset('admin/advertisements')}}><i class="fa fa-user"></i> <span>View Advertisements</span></a></li>
+                    <li><a href={{asset('admin/advertisements/create')}}><i class="fa fa-user"></i> <span>Create Advertisement</span></a></li>
+                </ul>
+            </li>
+            <li class="active treeview menu-open">
+                <a href="#">
+                    <i class="fa fa-user"></i> <span>Manage Characterisics</span>
+                    <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+                </a>
+                <ul class="treeview-menu" style="">
+                    <li><a href={{asset('admin/characteristics')}}><i class="fa fa-user"></i> <span>View Characterisics</span></a></li>
+                    <li><a href={{asset('admin/characteristics/create')}}><i class="fa fa-user"></i> <span>Create Characterisic</span></a></li>
+                </ul>
+            </li>
 
         </ul>
     </section>
