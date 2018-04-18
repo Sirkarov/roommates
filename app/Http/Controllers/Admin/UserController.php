@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Models\GenderType;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -19,7 +20,8 @@ class UserController extends Controller
     }
     public function create()
     {
-        return view('admin.users.create');
+        $genderTypes = GenderType::all();
+        return view('admin.users.create',compact('genderTypes'));
     }
     public  function store(Request $request)
     {
@@ -27,6 +29,7 @@ class UserController extends Controller
         $user = new User;
         $user->name = $request->get('name');
         $user->surname = $request->get('surname');
+        $user->gender_type_id = $request->get('gender');
         $user->email = $request->get('email');
         $user->years = $request->get('years');
         $user->city = $request->get('city');

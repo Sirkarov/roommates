@@ -22,8 +22,9 @@
                     <label for="exampleInputSurname1">Пол</label>
                     <select class="form-control" id="exampleGender1" required name="gender">
                         <option hidden value="">Одбери Пол</option>
-                        <option>Машко</option>
-                        <option>Женско</option>
+                        @foreach($genderTypes as $genderType)
+                            <option value="{{$genderType->id}}">{{$genderType->type}}</option>
+                        @endforeach
                     </select>
                 </div>
                 <div class="form-group">
