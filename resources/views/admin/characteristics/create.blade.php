@@ -10,13 +10,14 @@
             <div class="box-body">
                 <div class="form-group">
                     <label for="exampleInputNameCharacteristic1">Име на Карактеристика</label><br><br>
-                    <input type="text" class="form-control" id="exampleInpuNameCharacteristic1" placeholder="Внеси Име на Карактеристика" name="name_characteristic">
+                    <input type="text" class="form-control" id="exampleInpuNameCharacteristic1" placeholder="Внеси Име на Карактеристика" name="characteristic">
                 </div>
             </div>
             <!-- /.box-body -->
 
-            <div class="box-footer">
-                <button type="submit" class="btn btn-primary">Додади</button><br><br>
+            <div class="box-footer buttons">
+                <a class="btn btn-block btn-info btn-sm fa fa-times" href="{{route('admin.characteristics.list')}}"  style="display:inline"> Откажи</a>
+                <button type="submit" class="btn btn-success fa fa-check" style="display:inline"> Додади</button>
             </div>
         </form>
         <!-- form end  -->

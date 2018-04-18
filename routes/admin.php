@@ -19,7 +19,9 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.'], function(){
         Route::get('/', 'Admin\CharacteristicController@index')->name('list');
         Route::get('create', 'Admin\CharacteristicController@create')->name('create');
         Route::post('store','Admin\CharacteristicController@store')->name('store');
+        Route::post('update/{id}','Admin\CharacteristicController@update')->name('update');
         Route::delete('destroy/{id}','Admin\CharacteristicController@destroy')->name('destroy');
+        Route::get('edit/{id}','Admin\CharacteristicController@edit')->name('edit');
     });
 
 });

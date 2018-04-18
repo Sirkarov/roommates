@@ -23,15 +23,31 @@ class CharacteristicController extends Controller
     {
         #Create new Characteristic
         $characteristic = new Characteristic;
-        $characteristic->characteristic = $request->get('name_characteristic');
+        $characteristic->characteristic = $request->get('characteristic');
         #Save it to the database
         $characteristic->save();
         #And redirect somewhere in the application
         return redirect('admin/characteristics')->with(['success'=>'succesfully added']);
     }
-    public function destroy($id){
+    public function destroy($id)
+    {
         $characteristic=Characteristic::findOrFail($id);
         $characteristic->delete();
+
         return redirect(route('admin.characteristics.list'));
+    }
+    public function edit($id)
+    {
+        $characteristic = Characteristic::findOrFail($id);
+
+        return view('admin.characteristics.edit', compact('characteristic'));
+    }
+    public function update(Request $request,$id)
+    {
+        $characteristic = Characteristic::findorFail($id);
+        $characteristic->characteristic = $request->get('characteristic');
+        $characteristic->save();
+
+        return redirect('admin/characteristics')->with(['success'=>'succesfully added']);
     }
 }
