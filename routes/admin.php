@@ -5,7 +5,7 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.'], function(){
 
     #User routes
     Route::group(['prefix' => 'users', 'as' => 'users.'], function() {
-        Route::get('/', 'Admin\UserController@list');
+        Route::get('/', 'Admin\UserController@list')->name('list');
         Route::get('create', 'Admin\UserController@create')->name('create');
         Route::post('store','Admin\UserController@store')->name('store');
     });

@@ -32,6 +32,13 @@ class UserController extends Controller
         $user->city = $request->get('city');
         $user->phone = $request->get('phone');
         $user->description = $request->get('description');
+        $user->facebook = $request->get('facebook');
+        $user->twitter = $request->get('twitter');
+        $user->image = "default";
+        $user->password = "default";
+
+
+
 
         #Save it to the database
         $user->save();

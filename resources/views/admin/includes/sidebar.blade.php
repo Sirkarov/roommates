@@ -51,7 +51,7 @@
             </li>
             <li class="active treeview menu-open">
                 <a href="#">
-                    <i class="fa fa-user"></i> <span>Manage Characterisics</span>
+                    <i class="fa fa-puzzle-piece"></i> <span>Manage Characterisics</span>
                     <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>

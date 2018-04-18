@@ -7,7 +7,7 @@
     <!-- /.box-header -->
     <div class="box-body">
         <div class="col-lg-6">
-            <div class="col-sm-1"><a class="btn btn-success " href={{asset('/admin/characteristics/create')}}>Add New Characteristic</a></div>
+            <div class="col-sm-1"><a class="btn btn-success " href={{asset('/admin/characteristics/create')}}>Add New Characteristic</a></div><br><br>
         <table class="table table-bordered">
             <thead>
             <tr>

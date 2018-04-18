@@ -6,9 +6,9 @@
 </div>
 <!-- /.box-header -->
 <div class="box-body">
+    <div class="col-sm-1"><a class="btn btn-success" href={{asset('/admin/users/create')}}>Add New User</a></div>
     <div id="example1_wrapper" class="dataTables_wrapper form-inline dt-bootstrap">
         <div class="row">
-            <div class="col-sm-1"><a class="btn btn-success" href={{asset('/admin/users/create')}}>Add New User</a></div>
             <div class="col-sm-12">
                 <table id="example1" class="table table-bordered table-striped dataTable" role="grid" aria-describedby="example1_info">
                     <thead>
@@ -20,6 +20,11 @@
                         <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="CSS grade: activate to sort column ascending" style="width: 191px;">Тип Корисник</th>
                         <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="CSS grade: activate to sort column ascending" style="width: 191px;">Пол</th>
                         <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="CSS grade: activate to sort column ascending" style="width: 191px;">Години</th>
+                        <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="CSS grade: activate to sort column ascending" style="width: 191px;">Град</th>
+                        <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="CSS grade: activate to sort column ascending" style="width: 191px;">Телефон</th>
+                        <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="CSS grade: activate to sort column ascending" style="width: 191px;">Опис</th>
+                        <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="CSS grade: activate to sort column ascending" style="width: 191px;">Facebook</th>
+                        <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="CSS grade: activate to sort column ascending" style="width: 191px;">Twitter</th>
                         <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="CSS grade: activate to sort column ascending" style="width: 191px;"></th>
                         <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="CSS grade: activate to sort column ascending" style="width: 191px;"></th>
                     </tr>
@@ -28,12 +33,17 @@
                     @foreach($users as $user)
                     <tr role="row" class="odd">
                         <td class="sorting_1">{{$user->id}}</td>
-                        <td>{{$user->name}}</td>
-                        <td>{{$user->surname}}</td>
-                        <td>{{$user->email}}</td>
-                        <td>{{$user->role}}</td>
-                        <td>{{$user->gender_type_id}}</td>
-                        <td>{{$user->years}}</td>
+                        <td>{{ $user->name }}</td>
+                        <td>{{ $user->surname }}</td>
+                        <td>{{ $user->email }}</td>
+                        <td>{{ $user->role }}</td>
+                        <td>{{ $user->genderType->type }}</td>
+                        <td>{{ $user->years }}</td>
+                        <td>{{ $user->city }}</td>
+                        <td>{{ $user->phone }}</td>
+                        <td>{{ $user->description }}</td>
+                        <td>{{ $user->facebook }}</td>
+                        <td>{{ $user->twitter }}</td>
                         <td>
                             <button type="button" class="btn btn-block btn-warning btn-sm">Edit</button>
                         </td>
@@ -44,14 +54,22 @@
                         @endforeach
                     </tbody>
                     <tfoot>
-                    <tr><th rowspan="1" colspan="1">ID</th>
+                    <tr>
+                        <th rowspan="1" colspan="1">ID</th>
                         <th rowspan="1" colspan="1">Име</th>
                         <th rowspan="1" colspan="1">Презиме</th>
                         <th rowspan="1" colspan="1">Email</th>
                         <th rowspan="1" colspan="1">Тип Корисник</th>
                         <th rowspan="1" colspan="1">Пол</th>
                         <th rowspan="1" colspan="1">Години</th>
-                        <th rowspan="1" colspan="1"></th></tr>
+                        <th rowspan="1" colspan="1">Град</th>
+                        <th rowspan="1" colspan="1">Телефон</th>
+                        <th rowspan="1" colspan="1">Опис</th>
+                        <th rowspan="1" colspan="1">Facebook</th>
+                        <th rowspan="1" colspan="1">Twitter</th>
+                        <th rowspan="1" colspan="1"></th>
+                        <th rowspan="1" colspan="1"></th>
+                    </tr>
                     </tfoot>
                 </table></div></div>
     </div>
