@@ -55,3 +55,4 @@ $(function () {
     })
 })
 </script>
+@yield('custom-scripts')

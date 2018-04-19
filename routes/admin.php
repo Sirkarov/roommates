@@ -8,6 +8,7 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.'], function(){
         Route::get('/', 'Admin\UserController@list')->name('list');
         Route::get('create', 'Admin\UserController@create')->name('create');
         Route::post('store','Admin\UserController@store')->name('store');
+        Route::delete('delete','Admin\UserController@delete')->name('delete');
     });
     #Advertisement routes
     Route::group(['prefix' => 'advertisements', 'as' => 'advertisements.'],function(){

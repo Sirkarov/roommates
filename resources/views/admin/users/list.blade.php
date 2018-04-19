@@ -29,7 +29,7 @@
                         <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="CSS grade: activate to sort column ascending" style="width: 191px;"></th>
                     </tr>
                     </thead>
-                    <tbody>
+                    <tbody id="Click">
                     @foreach($users as $user)
                     <tr role="row" class="odd">
                         <td class="sorting_1">{{$user->id}}</td>
@@ -45,10 +45,11 @@
                         <td>{{ $user->facebook }}</td>
                         <td>{{ $user->twitter }}</td>
                         <td>
-                            <button type="button" class="btn btn-block btn-warning btn-sm">Edit</button>
+                            <button  type="button" class="btn btn-block btn-warning btn-sm">Edit</button>
                         </td>
                         <td>
-                            <button type="button" class="btn btn-block btn-danger btn-sm">Delete</button>
+                            <a class="btn btn-danger delete-button" data-id="{{$user->id}}" data-token="{{csrf_token()}}" data-url="{{route('admin.users.delete')}}">Delete
+                            </a>
                         </td>
                     </tr>
                         @endforeach
@@ -78,3 +79,42 @@
 <!-- /.box-body -->
 </div>
 @endsection
+@section('custom-scripts')
+    <script>
+        $(document).ready(function () {
+            $("#example1").on("click", ".delete-button", function(){
+                alert("ENTERS");
+                var token = $(this).data('token');
+                var url = $(this).data('url');
+                var id= $(this).data("id");
+                var that = $(this);
+                swal({
+                    title: "Дали сте сигурни?",
+                    text: "Нема да можете да вратите избришани податоци",
+                    icon: "warning",
+                    buttons: true,
+                    dangerMode: true,
+                })
+                    .then((willDelete) => {
+                        if (willDelete) {
+                            $.ajax({
+                                method: "DELETE",
+                                url: url,
+                                data : {_token:token, id: id},
+                                success: function(response){
+                                    swal("Успешно е избришано.", {
+                                        icon: "success",
+                                    });
+                                    if(response.status=='success') {
+                                        that.closest('tr').fadeOut(500);
+                                    }
+                                }
+                            });
+                        }
+
+                    });
+            });
+        });
+    </script>
+    @endsection
+

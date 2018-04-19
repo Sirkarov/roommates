@@ -9,6 +9,7 @@
 @include('admin/includes/sidebar')
     <div class="content-wrapper">
         @yield("content")
+
     </div>
 @include('admin/includes/footer')
 <!-- Control Sidebar -->
@@ -206,6 +207,7 @@
     <div class="control-sidebar-bg"></div>
 </div>
 <!-- ./wrapper -->
-@include('admin/includes/scripts')
 </body>
 </html>
+@include('admin/includes/scripts')
+

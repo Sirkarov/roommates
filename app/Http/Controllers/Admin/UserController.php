@@ -5,11 +5,12 @@ namespace App\Http\Controllers\Admin;
 use App\Models\GenderType;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-
+use GenerateLocalized;
 use App\Models\User;
 use DB;
 use Symfony\Component\Debug\Tests\Fixtures\FinalClass;
 use View;
+
 
 class UserController extends Controller
 {
@@ -48,6 +49,14 @@ class UserController extends Controller
 
         #And redirect somewhere in the application
         return redirect('admin/users')->with(['success'=>'succesfully added']);
+    }
+
+    public function delete(Request $request){
+
+        $user=User::find($request->get("id"));
+        $user->delete();
+
+        return response()->json(['status' => 'success']);
     }
 
 }
