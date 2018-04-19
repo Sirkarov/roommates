@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use \App\Models\AdvertisementType;
 
 class AdvertisementTypeSeeder extends Seeder
 {
@@ -14,7 +15,7 @@ class AdvertisementTypeSeeder extends Seeder
         //
         foreach ($this->getAdvertisementTypes() as $type)
         {
-           \App\AdvertisementType::create(['type'=>$type]);
+           \App\Models\AdvertisementType::create(['type'=>$type]);
         }
     }
 

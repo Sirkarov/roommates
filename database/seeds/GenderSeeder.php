@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use App\Models\GenderType;
 
 class GenderSeeder extends Seeder
 {
@@ -12,14 +13,14 @@ class GenderSeeder extends Seeder
     public function run()
     {
         foreach ($this->getGenders() as $gender){
-            \App\GenderType::create(['type' => $gender]);
+            \App\Models\GenderType::create(['type' => $gender]);
         }
     }
 
     private function getGenders()
     {
         return [
-            'Maшко',
+            'Машко',
             'Женско'
         ];
     }

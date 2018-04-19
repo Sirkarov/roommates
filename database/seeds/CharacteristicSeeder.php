@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use App\Models\Characteristic;
 
 class CharacteristicSeeder extends Seeder
 {
@@ -13,7 +14,7 @@ class CharacteristicSeeder extends Seeder
     {
         foreach ($this->getCharacteristics() as $characteristic)
         {
-            App\Characteristic::create(['characteristic'=> $characteristic]);
+            Characteristic::create(['characteristic'=> $characteristic]);
         }
     }
 
