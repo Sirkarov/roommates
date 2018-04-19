@@ -48,7 +48,7 @@
                             <button  type="button" class="btn btn-block btn-warning btn-sm">Edit</button>
                         </td>
                         <td>
-                            <a class="btn btn-danger delete-button" data-id="{{$user->id}}" data-token="{{csrf_token()}}" data-url="{{route('admin.users.delete')}}">Delete
+                            <a class="btn btn-block btn-danger delete-button btn-sm" data-id="{{$user->id}}" data-token="{{csrf_token()}}" data-url="{{route('admin.users.delete')}}">Delete
                             </a>
                         </td>
                     </tr>
@@ -83,7 +83,6 @@
     <script>
         $(document).ready(function () {
             $("#example1").on("click", ".delete-button", function(){
-                alert("ENTERS");
                 var token = $(this).data('token');
                 var url = $(this).data('url');
                 var id= $(this).data("id");

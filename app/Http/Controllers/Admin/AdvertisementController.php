@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Models\AdvertisementType;
+use App\Models\User;
+use App\Models\Advertisement;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\Models\Advertisement;
 use View;
 use DB;
 class AdvertisementController extends Controller
@@ -16,6 +18,9 @@ class AdvertisementController extends Controller
     }
     public function create()
     {
-        return view('admin/advertisements/create');
+        $advertisements = Advertisement::all();
+        $users = User::all();
+        $advertisement_types = AdvertisementType::all();
+        return view('admin.advertisements.create',compact("advertisements","users",'advertisement_types'));
     }
 }
