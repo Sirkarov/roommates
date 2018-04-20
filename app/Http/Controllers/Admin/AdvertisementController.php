@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Models\AdvertisementType;
+use App\Models\City;
 use App\Models\User;
 use App\Models\Advertisement;
 use Illuminate\Http\Request;
@@ -20,7 +21,8 @@ class AdvertisementController extends Controller
     {
         $advertisements = Advertisement::all();
         $users = User::all();
+        $cities = City::all();
         $advertisement_types = AdvertisementType::all();
-        return view('admin.advertisements.create',compact("advertisements","users",'advertisement_types'));
+        return view('admin.advertisements.create',compact("advertisements","users",'advertisement_types','cities'));
     }
 }

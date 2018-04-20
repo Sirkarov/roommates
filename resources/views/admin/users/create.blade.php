@@ -19,6 +19,15 @@
                     <input type="text" required class="form-control" id="exampleInputSurname1" placeholder="Внеси Презиме" name="surname">
                 </div>
                 <div class="form-group">
+                    <label for="exampleInputSurname1">Улога</label>
+                    <select class="form-control" id="exampleGender1" required name="gender">
+                        <option hidden value="">Одбери Улога</option>
+                        @foreach($users as $user)
+                            <option>{{$user->role}}</option>
+                        @endforeach
+                    </select>
+                </div>
+                <div class="form-group">
                     <label for="exampleInputSurname1">Пол</label>
                     <select class="form-control" id="exampleGender1" required name="gender">
                         <option hidden value="">Одбери Пол</option>

@@ -12,9 +12,9 @@
             <thead>
             <tr>
                 <th style="width: 10px">ID</th>
-                <th>Карактеристика</th>
-                <th>Измени</th>
-                <th>Избриши</th>
+                <th style="width: 30px">Карактеристика</th>
+                <th style="width: 10px">Измени</th>
+                <th style="width: 10px">Избриши</th>
             </tr>
             </thead>
             <tbody>

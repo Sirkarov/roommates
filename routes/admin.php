@@ -12,10 +12,11 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.'], function(){
     });
     #Advertisement routes
     Route::group(['prefix' => 'advertisements', 'as' => 'advertisements.'],function(){
-        Route::get('/', 'Admin\AdvertisementController@list');
-        Route::get('create', 'Admin\AdvertisementController@create');
+        Route::get('/', 'Admin\AdvertisementController@list')->name('list');
+        Route::get('create', 'Admin\AdvertisementController@create')->name('create');
         Route::post('store','Admin\AdvertisementController@store')->name('store');
         Route::delete('delete','Admin\AdvertisementController@delete')->name('delete');
+        Route::get('edit/{id}','Admin\AdvertisementController@edit')->name('edit');
     });
     #Characteristics routes
     Route::group(['prefix' => 'characteristics', 'as' => 'characteristics.'],function(){
@@ -25,6 +26,16 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.'], function(){
         Route::post('update/{id}','Admin\CharacteristicController@update')->name('update');
         Route::delete('destroy/{id}','Admin\CharacteristicController@destroy')->name('destroy');
         Route::get('edit/{id}','Admin\CharacteristicController@edit')->name('edit');
+    });
+
+    #Cities routes
+    Route::group(['prefix'=> 'cities', 'as' => 'cities.'],function (){
+        Route::get('/', 'Admin\CityController@list')->name('list');
+        Route::get('create', 'Admin\CityController@create')->name('create');
+        Route::post('store','Admin\CityController@store')->name('store');
+        Route::post('update/{id}','Admin\CityController@update')->name('update');
+        Route::delete('destroy/{id}','Admin\CityController@destroy')->name('destroy');
+        Route::get('edit/{id}','Admin\CityController@edit')->name('edit');
     });
 
 });

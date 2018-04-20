@@ -61,6 +61,13 @@
                     <li><a href={{asset('admin/characteristics/create')}}><i class="fa fa-user"></i> <span>Create Characterisic</span></a></li>
                 </ul>
             </li>
+            <li class="active">
+                <a href="{{asset('admin/cities')}}">
+                    <i class="fa  fa-location-arrow"></i> <span>Manage Cities</span>
+                    <span class="pull-right-container">
+            </span>
+                </a>
+            </li>
 
         </ul>
     </section>

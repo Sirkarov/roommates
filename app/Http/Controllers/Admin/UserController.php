@@ -21,8 +21,9 @@ class UserController extends Controller
     }
     public function create()
     {
+        $users = User::all();
         $genderTypes = GenderType::all();
-        return view('admin.users.create',compact('genderTypes'));
+        return view('admin.users.create',compact('users','genderTypes'));
     }
     public  function store(Request $request)
     {
@@ -40,9 +41,6 @@ class UserController extends Controller
         $user->twitter = $request->get('twitter');
         $user->image = "default";
         $user->password = "default";
-
-
-
 
         #Save it to the database
         $user->save();
