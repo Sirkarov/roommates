@@ -36,10 +36,10 @@
                         <td>{{ $user->name }}</td>
                         <td>{{ $user->surname }}</td>
                         <td>{{ $user->email }}</td>
-                        <td>{{ $user->role }}</td>
+                        <td>{{ $user->roleType->role }}</td>
                         <td>{{ $user->genderType->type }}</td>
                         <td>{{ $user->years }}</td>
-                        <td>{{ $user->city }}</td>
+                        <td>{{ $user->city->name}}</td>
                         <td>{{ $user->phone }}</td>
                         <td>{{ $user->description }}</td>
                         <td>{{ $user->facebook }}</td>

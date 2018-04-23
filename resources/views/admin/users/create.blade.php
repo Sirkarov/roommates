@@ -22,8 +22,8 @@
                     <label for="exampleInputSurname1">Улога</label>
                     <select class="form-control" id="exampleGender1" required name="role">
                         <option hidden value="">Одбери Улога</option>
-                        @foreach($roles as $role)
-                            <option>{{$role->role}}</option>
+                        @foreach($roleTypes as $roleType)
+                            <option value="{{$roleType->id}}">{{$roleType->role}}</option>
                         @endforeach
                     </select>
                 </div>
@@ -49,7 +49,7 @@
                     <select class="form-control" id="example1" required name="city">
                         <option hidden value="">Одбери Град</option>
                         @foreach($cities as $city)
-                            <option>{{$city->name}}</option>
+                            <option value="{{$city->id}}">{{$city->name}}</option>
                         @endforeach
                     </select>
                 </div>

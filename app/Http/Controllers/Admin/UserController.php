@@ -25,9 +25,9 @@ class UserController extends Controller
     {
         $users = User::all();
         $genderTypes = GenderType::all();
-        $roles = Role::all();
+        $roleTypes = Role::all();
         $cities = City::all();
-        return view('admin.users.create',compact('users','genderTypes','cities','roles'));
+        return view('admin.users.create',compact('users','genderTypes','cities','roleTypes'));
     }
     public  function store(Request $request)
     {
@@ -36,17 +36,17 @@ class UserController extends Controller
         $user->name = $request->get('name');
         $user->surname = $request->get('surname');
         $user->gender_type_id = $request->get('gender');
-        $user->role = $request->get("role");
+        $user->role_id = $request->get("role");
         $user->email = $request->get('email');
         $user->years = $request->get('years');
-        $user->city = $request->get('city');
+        $user->city_id = $request->get('city');
         $user->phone = $request->get('phone');
         $user->description = $request->get('description');
         $user->facebook = $request->get('facebook');
         $user->twitter = $request->get('twitter');
         $user->image = "default";
         $user->password = "default";
-        
+
         #Save it to the database
         $user->save();
 

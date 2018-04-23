@@ -17,11 +17,11 @@ class CreateUsersTable extends Migration
             $table->increments('id');
             $table->unsignedInteger("gender_type_id")->nullable();
             $table->unsignedInteger('role_id')->nullable();
+            $table->unsignedInteger('city_id')->nullable();
             $table->string('name');
             $table->string('surname');
             $table->string('email');
             $table->integer('years');
-            $table->string('city');
             $table->string('phone');
             $table->string('description');
             $table->string('facebook');
@@ -33,6 +33,7 @@ class CreateUsersTable extends Migration
             #Constraints
             $table->foreign("gender_type_id")->references("id")->on("gender_types")->onDelete("cascade")->onUpdate("cascade");
             $table->foreign("role_id")->references("id")->on("roles")->onDelete("cascade")->onUpdate("cascade");
+            $table->foreign("city_id")->references("id")->on("cities")->onDelete("cascade")->onUpdate("cascade");
         });
     }
 
