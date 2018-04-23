@@ -46,7 +46,7 @@ class UserController extends Controller
         $user->twitter = $request->get('twitter');
         $user->image = "default";
         $user->password = "default";
-
+        
         #Save it to the database
         $user->save();
 

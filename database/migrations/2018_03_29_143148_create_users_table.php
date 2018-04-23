@@ -16,7 +16,7 @@ class CreateUsersTable extends Migration
         Schema::create('users', function (Blueprint $table) {
             $table->increments('id');
             $table->unsignedInteger("gender_type_id")->nullable();
-            $table->string('role');
+            $table->unsignedInteger('role_id')->nullable();
             $table->string('name');
             $table->string('surname');
             $table->string('email');
@@ -32,6 +32,7 @@ class CreateUsersTable extends Migration
 
             #Constraints
             $table->foreign("gender_type_id")->references("id")->on("gender_types")->onDelete("cascade")->onUpdate("cascade");
+            $table->foreign("role_id")->references("id")->on("roles")->onDelete("cascade")->onUpdate("cascade");
         });
     }
 
