@@ -7,6 +7,12 @@
 <!-- /.box-header -->
 <div class="box-body">
     <div class="col-sm-1"><a class="btn btn-success" href={{asset('/admin/users/create')}}>Add New User</a></div>
+
+    <form role="form" method="POST" action="{{route('admin.users.testStore')}}">
+
+   <button type="submit" required class="btn btn-warning" style="display:inline"> Add Test User</button>
+    </form>
+
     <div id="example1_wrapper" class="dataTables_wrapper form-inline dt-bootstrap">
         <div class="row">
             <div class="col-sm-12">
@@ -45,7 +51,7 @@
                         <td>{{ $user->facebook }}</td>
                         <td>{{ $user->twitter }}</td>
                         <td>
-                            <button  type="button" class="btn btn-block btn-warning btn-sm">Edit</button>
+                            <a class="btn btn-block btn-warning btn-sm"  href="{{route('admin.users.edit', $user->id )}}">Edit</a>
                         </td>
                         <td>
                             <a class="btn btn-block btn-danger delete-button btn-sm" data-id="{{$user->id}}" data-token="{{csrf_token()}}" data-url="{{route('admin.users.delete')}}">Delete

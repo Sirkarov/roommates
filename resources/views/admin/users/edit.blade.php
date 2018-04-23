@@ -1,0 +1,85 @@
+@section('title')
+    @extends('admin.master')
+@section('content')
+
+    <div class="box box-primary">
+        <div class="box-header with-border">
+            <h1 class="box-title">Додадете нов Корисник</h1>
+        </div>
+        <!-- /.box-header -->
+        <!-- form start -->
+        <form role="form" method="POST" action="{{route('admin.users.update',$user->id)}}">
+            <div class="box-body">
+                <div class="form-group">
+                    <label for="exampleInputName1">Име</label>
+                    <input type="text" class="form-control" id="exampleInputName1" value="{{$user->name}}" name="name">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputSurname1">Презиме</label>
+                    <input type="text" class="form-control" id="exampleInputSurname1" value="{{$user->surname}}" name="surname">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputSurname1">Улога</label>
+                    <select class="form-control" id="exampleGender1" name="role">
+                        <option hidden value="{{$user->role_id}}">{{$user->roleType->role}}</option>
+                        @foreach($roleTypes as $roleType)
+                            <option value="{{$roleType->id}}">{{$roleType->role}}</option>
+                        @endforeach
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputSurname1">Пол</label>
+                    <select class="form-control" id="exampleGender1" name="gender">
+                        <option hidden value="{{$user->gender_type_id}}">{{$user->genderType->type}}</option>
+                        @foreach($genderTypes as $genderType)
+                            <option value="{{$genderType->id}}">{{$genderType->type}}</option>
+                        @endforeach
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Email Адреса</label>
+                    <input type="email"  class="form-control" id="exampleInputEmail1" value="{{$user->email}}" name="email">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputYears1">Години</label>
+                    <input type="text"  class="form-control" id="exampleInputYears1"value="{{$user->years}}" name="years">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputYears1">Град</label>
+                    <select class="form-control" id="example1"  name="city">
+                        <option hidden value="{{$user->city_id}}">{{$user->city->name}}</option>
+                        @foreach($cities as $city)
+                            <option value="{{$city->id}}">{{$city->name}}</option>
+                        @endforeach
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputYears1">Телефон</label>
+                    <input type="text"  class="form-control" id="exampleInputPhone1" value="{{$user->phone}}" name="phone">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputYears1">Опис</label>
+                    <input type="text" class="form-control" id="exampleInputDescription1" value="{{$user->description}}" name="description">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputYears1">Facebook</label>
+                    <input type="text"  class="form-control" id="exampleInputFacebook1" value="{{$user->facebook}}" name="facebook">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputYears1">Twitter</label>
+                    <input type="text"  class="form-control" id="exampleInputTwitter1" value="{{$user->twitter}}" name="twitter">
+                </div>
+            </div>
+            <!-- /.box-body -->
+            <div class="box-footer buttons">
+                <div class="row">
+                    <div class="col-lg-2">
+                    <a class="btn btn-block btn-info btn-sm fa fa-times" href="{{route('admin.users.list')}}"> Откажи</a>
+                        <button type="submit"  style="display:inline" class="btn btn-block btn-success btn-sm fa fa-times"> Зачувај</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <!-- form end  -->
+    </div>
+@endsection
