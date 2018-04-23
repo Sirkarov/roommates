@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Models\GenderType;
+use App\Models\Role;
+use App\Models\City;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use GenerateLocalized;
@@ -23,7 +25,9 @@ class UserController extends Controller
     {
         $users = User::all();
         $genderTypes = GenderType::all();
-        return view('admin.users.create',compact('users','genderTypes'));
+        $roles = Role::all();
+        $cities = City::all();
+        return view('admin.users.create',compact('users','genderTypes','cities','roles'));
     }
     public  function store(Request $request)
     {
@@ -32,6 +36,7 @@ class UserController extends Controller
         $user->name = $request->get('name');
         $user->surname = $request->get('surname');
         $user->gender_type_id = $request->get('gender');
+        $user->role = $request->get("role");
         $user->email = $request->get('email');
         $user->years = $request->get('years');
         $user->city = $request->get('city');

@@ -19,5 +19,9 @@ class User extends Authenticatable
     {
         return $this->hasMany(Advertisement::class,"user_id");
     }
+    public function roleType()
+    {
+        return $this->belongsTo(Role::class,"role");
+    }
 
 }

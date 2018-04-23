@@ -20,10 +20,10 @@
                 </div>
                 <div class="form-group">
                     <label for="exampleInputSurname1">Улога</label>
-                    <select class="form-control" id="exampleGender1" required name="gender">
+                    <select class="form-control" id="exampleGender1" required name="role">
                         <option hidden value="">Одбери Улога</option>
-                        @foreach($users as $user)
-                            <option>{{$user->role}}</option>
+                        @foreach($roles as $role)
+                            <option>{{$role->role}}</option>
                         @endforeach
                     </select>
                 </div>
@@ -46,7 +46,12 @@
                 </div>
                 <div class="form-group">
                     <label for="exampleInputYears1">Град</label>
-                    <input type="text" required class="form-control" id="exampleInputCity1" placeholder="Внеси Години" name="city">
+                    <select class="form-control" id="example1" required name="city">
+                        <option hidden value="">Одбери Град</option>
+                        @foreach($cities as $city)
+                            <option>{{$city->name}}</option>
+                        @endforeach
+                    </select>
                 </div>
                 <div class="form-group">
                     <label for="exampleInputYears1">Телефон</label>
