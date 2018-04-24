@@ -60,7 +60,7 @@ class UserController extends Controller
         $user = new User;
         $user->name = "Test User Name";
         $user->surname = "test User Surname";
-        $user->gender_type_id = 1;
+        $user->gender_type_id = rand(1,2);
         $user->role_id = 3;
         $user->email = "Test@Useremail.com";
 
@@ -105,6 +105,7 @@ class UserController extends Controller
         $user->city_id = $request->get('city');
         $user->phone = $request->get('phone');
         $user->description = $request->get('description');
+        $user->facebook = $request->get('facebook');
         $user->twitter = $request->get('twitter');
         $user->image = "default";
         $user->password = "default";

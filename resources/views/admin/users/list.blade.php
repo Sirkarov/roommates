@@ -76,7 +76,6 @@
                         <th rowspan="1" colspan="1">Twitter</th>
                         <th rowspan="1" colspan="1"></th>
                         <th rowspan="1" colspan="1"></th>
-                        <th rowspan="1" colspan="1"></th>
                     </tr>
                     </tfoot>
                 </table></div></div>

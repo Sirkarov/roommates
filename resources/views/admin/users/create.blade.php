@@ -12,15 +12,15 @@
             <div class="box-body">
                 <div class="form-group">
                     <label for="exampleInputName1">Име</label>
-                    <input type="text" required  class="form-control" id="exampleInputName1" placeholder="Внеси Име" name="name">
+                    <input type="text" required  class="form-control" placeholder="Внеси Име" name="name">
                 </div>
                 <div class="form-group">
                     <label for="exampleInputSurname1">Презиме</label>
-                    <input type="text" required class="form-control" id="exampleInputSurname1" placeholder="Внеси Презиме" name="surname">
+                    <input type="text" required class="form-control" placeholder="Внеси Презиме" name="surname">
                 </div>
                 <div class="form-group">
                     <label for="exampleInputSurname1">Улога</label>
-                    <select class="form-control" id="exampleGender1" required name="role">
+                    <select class="form-control" required name="role">
                         <option hidden value="">Одбери Улога</option>
                         @foreach($roleTypes as $roleType)
                             <option value="{{$roleType->id}}">{{$roleType->role}}</option>
@@ -29,7 +29,7 @@
                 </div>
                 <div class="form-group">
                     <label for="exampleInputSurname1">Пол</label>
-                    <select class="form-control" id="exampleGender1" required name="gender">
+                    <select class="form-control" required name="gender">
                         <option hidden value="">Одбери Пол</option>
                         @foreach($genderTypes as $genderType)
                             <option value="{{$genderType->id}}">{{$genderType->type}}</option>
@@ -38,15 +38,15 @@
                 </div>
                 <div class="form-group">
                     <label for="exampleInputEmail1">Email Адреса</label>
-                    <input type="email" required class="form-control" id="exampleInputEmail1" placeholder="Внеси Email" name="email">
+                    <input type="email" required class="form-control" placeholder="Внеси Email" name="email">
                 </div>
                 <div class="form-group">
                     <label for="exampleInputYears1">Години</label>
-                    <input type="text" required class="form-control" id="exampleInputYears1" placeholder="Внеси Години" name="years">
+                    <input type="text" required class="form-control" placeholder="Внеси Години" name="years">
                 </div>
                 <div class="form-group">
                     <label for="exampleInputYears1">Град</label>
-                    <select class="form-control" id="example1" required name="city">
+                    <select class="form-control" required name="city">
                         <option hidden value="">Одбери Град</option>
                         @foreach($cities as $city)
                             <option value="{{$city->id}}">{{$city->name}}</option>
@@ -55,19 +55,19 @@
                 </div>
                 <div class="form-group">
                     <label for="exampleInputYears1">Телефон</label>
-                    <input type="text" required class="form-control" id="exampleInputPhone1" placeholder="Внеси Телефон" name="phone">
+                    <input type="text" required class="form-control" placeholder="Внеси Телефон" name="phone">
                 </div>
                 <div class="form-group">
                     <label for="exampleInputYears1">Опис</label>
-                    <input type="text" required class="form-control" id="exampleInputDescription1" placeholder="Додади Опис" name="description">
+                    <input type="text" required class="form-control" placeholder="Додади Опис" name="description">
                 </div>
                 <div class="form-group">
                     <label for="exampleInputYears1">Facebook</label>
-                    <input type="text" required class="form-control" id="exampleInputFacebook1" placeholder="Facebook" name="facebook">
+                    <input type="text" required class="form-control" placeholder="Facebook" name="facebook">
                 </div>
                 <div class="form-group">
                     <label for="exampleInputYears1">Twitter</label>
-                    <input type="text" required class="form-control" id="exampleInputTwitter1" placeholder="Twitter" name="twitter">
+                    <input type="text" required class="form-control" placeholder="Twitter" name="twitter">
                 </div>
             </div>
             <!-- /.box-body -->
