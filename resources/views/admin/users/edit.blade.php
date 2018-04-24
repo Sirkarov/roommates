@@ -12,15 +12,15 @@
             <div class="box-body">
                 <div class="form-group">
                     <label for="exampleInputName1">Име</label>
-                    <input type="text" class="form-control" id="exampleInputName1" value="{{$user->name}}" name="name">
+                    <input type="text" class="form-control" value="{{$user->name}}" required name="name">
                 </div>
                 <div class="form-group">
                     <label for="exampleInputSurname1">Презиме</label>
-                    <input type="text" class="form-control" id="exampleInputSurname1" value="{{$user->surname}}" name="surname">
+                    <input type="text" class="form-control" value="{{$user->surname}}" name="surname">
                 </div>
                 <div class="form-group">
                     <label for="exampleInputSurname1">Улога</label>
-                    <select class="form-control" id="exampleGender1" name="role">
+                    <select class="form-control" name="role">
                         <option hidden value="{{$user->role_id}}">{{$user->roleType->role}}</option>
                         @foreach($roleTypes as $roleType)
                             <option value="{{$roleType->id}}">{{$roleType->role}}</option>
@@ -29,7 +29,7 @@
                 </div>
                 <div class="form-group">
                     <label for="exampleInputSurname1">Пол</label>
-                    <select class="form-control" id="exampleGender1" name="gender">
+                    <select class="form-control" name="gender">
                         <option hidden value="{{$user->gender_type_id}}">{{$user->genderType->type}}</option>
                         @foreach($genderTypes as $genderType)
                             <option value="{{$genderType->id}}">{{$genderType->type}}</option>
@@ -38,15 +38,15 @@
                 </div>
                 <div class="form-group">
                     <label for="exampleInputEmail1">Email Адреса</label>
-                    <input type="email"  class="form-control" id="exampleInputEmail1" value="{{$user->email}}" name="email">
+                    <input type="email"  class="form-control" value="{{$user->email}}" name="email">
                 </div>
                 <div class="form-group">
                     <label for="exampleInputYears1">Години</label>
-                    <input type="text"  class="form-control" id="exampleInputYears1"value="{{$user->years}}" name="years">
+                    <input type="text"  class="form-control" value="{{$user->years}}" name="years">
                 </div>
                 <div class="form-group">
                     <label for="exampleInputYears1">Град</label>
-                    <select class="form-control" id="example1"  name="city">
+                    <select class="form-control" name="city">
                         <option hidden value="{{$user->city_id}}">{{$user->city->name}}</option>
                         @foreach($cities as $city)
                             <option value="{{$city->id}}">{{$city->name}}</option>
@@ -55,19 +55,19 @@
                 </div>
                 <div class="form-group">
                     <label for="exampleInputYears1">Телефон</label>
-                    <input type="text"  class="form-control" id="exampleInputPhone1" value="{{$user->phone}}" name="phone">
+                    <input type="text"  class="form-control" value="{{$user->phone}}" name="phone">
                 </div>
                 <div class="form-group">
                     <label for="exampleInputYears1">Опис</label>
-                    <input type="text" class="form-control" id="exampleInputDescription1" value="{{$user->description}}" name="description">
+                    <input type="text" class="form-control" value="{{$user->description}}" name="description">
                 </div>
                 <div class="form-group">
                     <label for="exampleInputYears1">Facebook</label>
-                    <input type="text"  class="form-control" id="exampleInputFacebook1" value="{{$user->facebook}}" name="facebook">
+                    <input type="text"  class="form-control" value="{{$user->facebook}}" name="facebook">
                 </div>
                 <div class="form-group">
                     <label for="exampleInputYears1">Twitter</label>
-                    <input type="text"  class="form-control" id="exampleInputTwitter1" value="{{$user->twitter}}" name="twitter">
+                    <input type="text"  class="form-control" value="{{$user->twitter}}" name="twitter">
                 </div>
             </div>
             <!-- /.box-body -->
