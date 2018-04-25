@@ -17,5 +17,7 @@ class DatabaseSeeder extends Seeder
         $this->call(CharacteristicSeeder::class);
         $this->call(CitySeeder::class);
         $this->call(RoleSeeder::class);
+        $this->call(HeatingSeeder::class);
+        $this->call(ApartmentSeeder::class);
     }
 }

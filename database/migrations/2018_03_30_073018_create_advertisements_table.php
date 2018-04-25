@@ -18,6 +18,8 @@ class CreateAdvertisementsTable extends Migration
             $table->unsignedInteger("user_id")->nullable();
             $table->unsignedInteger("adv_type_id")->nullable();
             $table->unsignedInteger('city_id')->nullable();
+            $table->unsignedInteger('heating_type_id')->nullable();
+            $table->unsignedInteger('apartment_type_id')->nullable();
             $table->string('coordinates');
             $table->string('street');
             $table->string('description');
@@ -31,6 +33,7 @@ class CreateAdvertisementsTable extends Migration
             $table->foreign("user_id")->references("id")->on("users")->onDelete("cascade")->onUpdate("cascade");
             $table->foreign("adv_type_id")->references("id")->on("advertisement_types")->onDelete("cascade")->onUpdate("cascade");
             $table->foreign("city_id")->references("id")->on("cities")->onDelete("cascade")->onUpdate("cascade");
+            $table->foreign("apartment_type_id")->references("id")->on("apartment_types")->onDelete("cascade")->onUpdate("cascade");
         });
     }
 
