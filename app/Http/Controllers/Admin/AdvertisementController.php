@@ -33,10 +33,11 @@ class AdvertisementController extends Controller
     public function store(Request $request)
     {
         $advertisement  = new Advertisement;
+
         $advertisement->user_id = $request->get('user');
         $advertisement->adv_type_id = $request->get('adv-type');
         $advertisement->city_id = $request->get('city');
-        $advertisement->heating_type_id = $request->get('city');
+        $advertisement->heating_type_id= $request->get('heating');
         $advertisement->apartment_type_id = $request->get('city');
         $advertisement->coordinates = $request->get('coordinates');
         $advertisement->street = $request->get('street');
@@ -48,6 +49,5 @@ class AdvertisementController extends Controller
         $advertisement->save();
 
         return redirect('admin/advertisements')->with(['success'=>'succesfully added']);
-
     }
 }

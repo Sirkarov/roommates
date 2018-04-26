@@ -24,7 +24,6 @@ class CreateAdvertisementsTable extends Migration
             $table->string('street');
             $table->string('description');
             $table->integer('roommates');
-            $table->string('heating');
             $table->string('size');
             $table->string('price');
             $table->timestamps();
@@ -34,6 +33,8 @@ class CreateAdvertisementsTable extends Migration
             $table->foreign("adv_type_id")->references("id")->on("advertisement_types")->onDelete("cascade")->onUpdate("cascade");
             $table->foreign("city_id")->references("id")->on("cities")->onDelete("cascade")->onUpdate("cascade");
             $table->foreign("apartment_type_id")->references("id")->on("apartment_types")->onDelete("cascade")->onUpdate("cascade");
+            $table->foreign("heating_type_id")->references("id")->on("heating_types")->onDelete("cascade")->onUpdate("cascade");
+
         });
     }
 

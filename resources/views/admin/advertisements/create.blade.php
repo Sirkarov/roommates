@@ -24,7 +24,7 @@
                     <select required  class="form-control" name="adv-type">
                         <option hidden value="">Избери тип на Оглас</option>
                         @foreach($advertisement_types as $type)
-                            <option >{{$type->type}}</option>
+                            <option value="{{$type->id}}">{{$type->type}}</option>
                         @endforeach
                     </select>
                 </div>
@@ -33,13 +33,17 @@
                     <select required  class="form-control" name="city">
                         <option hidden value="">Избери Град</option>
                         @foreach($cities as $city)
-                            <option>{{$city->name}}</option>
+                            <option value="{{$city->id}}">{{$city->name}}</option>
                         @endforeach
                     </select>
                 </div>
                 <div class="form-group">
                     <label for="exampleInputName1">Координати</label>
                     <input class="form-control" type="text" required placeholder="Внесете Координати" name="coordinates">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputName1">Опис</label>
+                    <textarea class="form-control" placeholder="Внесете Опис" name="description" rows="3"></textarea>
                 </div>
                 <div class="form-group">
                     <label for="exampleInputName1">Улица</label>
@@ -58,10 +62,10 @@
                 </div>
                 <div class="form-group">
                     <label for="exampleInputName1">Греење</label>
-                    <select required  class="form-control" name="heating">
+                    <select required class="form-control" name="heating">
                         <option hidden value="">Избери Греење</option>
                         @foreach($heating_types as $type)
-                            <option>{{$type->type}}</option>
+                            <option value="{{$type->id}}">{{$type->type}}</option>
                         @endforeach
                     </select>
                 </div>
@@ -71,10 +75,10 @@
                 </div>
                 <div class="form-group">
                     <label for="exampleInputName1">Тип на Објект</label>
-                    <select required  class="form-control" name="apartment-type">
+                    <select required class="form-control" name="apartment-type">
                         <option hidden value="">Избери Објект</option>
                         @foreach($apartment_types as $type)
-                            <option>{{$type->type}}</option>
+                            <option value="{{$type->id}}">{{$type->type}}</option>
                         @endforeach
                     </select>
                 </div>
