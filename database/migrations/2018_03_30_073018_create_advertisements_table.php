@@ -18,8 +18,8 @@ class CreateAdvertisementsTable extends Migration
             $table->unsignedInteger("user_id")->nullable();
             $table->unsignedInteger("adv_type_id")->nullable();
             $table->unsignedInteger('city_id')->nullable();
-            $table->unsignedInteger('heating_type_id')->nullable();
             $table->unsignedInteger('apartment_type_id')->nullable();
+            $table->unsignedInteger('heating_type_id')->nullable();
             $table->string('coordinates');
             $table->string('street');
             $table->string('description');

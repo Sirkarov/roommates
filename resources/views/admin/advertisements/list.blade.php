@@ -26,19 +26,19 @@
                             </tr>
                             </thead>
                             <tbody>
-                            @foreach($advertisements as $advert)
+                            @foreach($advertisements as $advertisemet)
                                 <tr role="row" class="odd">
-                                    <td class="sorting_1">{{$advert->id}}</td>
-                                    <td>{{$advert->user_id}}</td>
-                                    <td>{{$advert->adv_type_id}}</td>
-                                    <td>{{$advert->city}}</td>
-                                    <td>{{$advert->coordinates}}</td>
-                                    <td>{{$advert->street}}</td>
-                                    <td>{{$advert->description}}</td>
-                                    <td>{{$advert->roommates}}</td>
-                                    <td>{{$advert->heating}}</td>
-                                    <td>{{$advert->size}}</td>
-                                    <td>{{$advert->price}}</td>
+                                    <td class="sorting_1">{{$advertisemet->id}}</td>
+                                    <td>{{$advertisemet->user->name}} <br> {{$advertisemet->user->surname}}</td>
+                                    <td>{{$advertisemet->advertisementType->type}}</td>
+                                    <td>{{$advertisemet->city->name}}</td>
+                                    <td>{{$advertisemet->coordinates}}</td>
+                                    <td>{{$advertisemet->street}}</td>
+                                    <td>{{$advertisemet->description}}</td>
+                                    <td>{{$advertisemet->roommates}}</td>
+                                    <td>{{$advertisemet->heatingType->type}}</td>
+                                    <td>{{$advertisemet->size}}</td>
+                                    <td>{{$advertisemet->price}}</td>
                                     <td>
                                         <button type="button" class="btn btn-block btn-warning btn-sm">Edit</button>
                                     </td>

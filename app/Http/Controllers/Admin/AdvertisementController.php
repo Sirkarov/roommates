@@ -38,7 +38,7 @@ class AdvertisementController extends Controller
         $advertisement->adv_type_id = $request->get('adv-type');
         $advertisement->city_id = $request->get('city');
         $advertisement->heating_type_id= $request->get('heating');
-        $advertisement->apartment_type_id = $request->get('city');
+        $advertisement->apartment_type_id = $request->get('apartment-type');
         $advertisement->coordinates = $request->get('coordinates');
         $advertisement->street = $request->get('street');
         $advertisement->roommates = $request->get('roommates');

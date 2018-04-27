@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Heating extends Model
 {
-    protected $table = 'heating_types';
+    public $table = 'heating_types';
 
     public function advertisements()
     {
