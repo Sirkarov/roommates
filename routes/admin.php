@@ -20,6 +20,8 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.'], function(){
         Route::post('store','Admin\AdvertisementController@store')->name('store');
         Route::delete('delete','Admin\AdvertisementController@delete')->name('delete');
         Route::get('edit/{id}','Admin\AdvertisementController@edit')->name('edit');
+        Route::post('update/{id}','Admin\AdvertisementController@update')->name('update');
+        Route::post('testStore','Admin\AdvertisementController@testStore')->name('testStore');
     });
     #Characteristics routes
     Route::group(['prefix' => 'characteristics', 'as' => 'characteristics.'],function(){

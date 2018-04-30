@@ -20,6 +20,10 @@
                     </select>
                 </div>
                 <div class="form-group">
+                    <label for="exampleInputName1">Име на Огласот</label>
+                    <input class="form-control" type="text" required placeholder="Внесете Име" name="name">
+                </div>
+                <div class="form-group">
                     <label for="exampleInputName1">Тип на Оглас</label>
                     <select required  class="form-control" name="adv-type">
                         <option hidden value="">Избери тип на Оглас</option>
@@ -83,8 +87,18 @@
                     </select>
                 </div>
                 <div class="form-group">
-                    <label for="exampleInputName1">Цена</label>
+                    <label>Цена</label>
                     <input class="form-control" type="text" required placeholder="Внесете Цена" name="price">
+                </div>
+                <div class="form-group">
+                    <label>Карактеристики на Објектот</label><br>
+                    @foreach($characteristics as $characteristic)
+                        <div class="checkbox" value="{{$characteristic->id}}" style="display: inline">
+                            <label>
+                                <input type="checkbox"> {{$characteristic->characteristic}}
+                            </label>
+                        </div>
+                    @endforeach
                 </div>
             </div>
             <!-- /.box-body -->

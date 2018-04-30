@@ -6,13 +6,14 @@
 </div>
 <!-- /.box-header -->
 <div class="box-body">
-    <div class="col-sm-1"><a class="btn btn-success" href={{asset('/admin/users/create')}}>Add New User</a></div>
-
-    <form role="form" method="POST" action="{{route('admin.users.testStore')}}">
-
-   <button type="submit" required class="btn btn-warning" style="display:inline"> Add Test User</button>
-    </form>
-
+    <div class="row">
+        <div class="col-lg-1"><a class="btn btn-success" href={{asset('/admin/users/create')}}>Додади Нов Корисник</a></div>
+        <div class="col-lg-1">
+            <form role="form" method="POST" action="{{route('admin.users.testStore')}}">
+                <button type="submit" required class="btn btn-warning" style="margin-left:30px">ДОДАДИ ТЕСТ КОРИСНИК</button>
+            </form>
+        </div>
+    </div>
     <div id="example1_wrapper" class="dataTables_wrapper form-inline dt-bootstrap">
         <div class="row">
             <div class="col-sm-12">

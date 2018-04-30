@@ -20,12 +20,14 @@ class CreateAdvertisementsTable extends Migration
             $table->unsignedInteger('city_id')->nullable();
             $table->unsignedInteger('apartment_type_id')->nullable();
             $table->unsignedInteger('heating_type_id')->nullable();
+            $table->string('name');
             $table->string('coordinates');
             $table->string('street');
             $table->string('description');
             $table->integer('roommates');
             $table->string('size');
             $table->string('price');
+            $table->boolean('active');
             $table->timestamps();
 
             #Constraints

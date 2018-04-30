@@ -72,8 +72,8 @@
             </div>
             <!-- /.box-body -->
             <div class="box-footer buttons">
-                    <a class="btn btn-block btn-info btn-sm fa fa-times" href="{{route('admin.users.list')}}"> Откажи</a>
-                 <button type="submit"  style="display:inline" class="btn btn-block btn-success btn-sm fa fa-times"> Зачувај</button>
+                <a class="btn btn-block btn-info btn-sm fa fa-times" href="{{route('admin.users.list')}}"  style="display:inline"> Откажи</a>
+                <button type="submit" required class="btn btn-success fa fa-check" style="display:inline"> Зачувај</button>
             </div>
         </form>
         <!-- form end  -->
