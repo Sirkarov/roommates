@@ -20,7 +20,7 @@
                 </div>
                 <div class="form-group">
                     <label for="exampleInputSurname1">Улога</label>
-                    <select class="form-control" required name="role">
+                    <select class="form-control" required name="role_id">
                         <option hidden value="">Одбери Улога</option>
                         @foreach($roleTypes as $roleType)
                             <option value="{{$roleType->id}}">{{$roleType->role}}</option>
@@ -29,7 +29,7 @@
                 </div>
                 <div class="form-group">
                     <label for="exampleInputSurname1">Пол</label>
-                    <select class="form-control" required name="gender">
+                    <select class="form-control" required name="gender_type_id">
                         <option hidden value="">Одбери Пол</option>
                         @foreach($genderTypes as $genderType)
                             <option value="{{$genderType->id}}">{{$genderType->type}}</option>
@@ -46,7 +46,7 @@
                 </div>
                 <div class="form-group">
                     <label for="exampleInputYears1">Град</label>
-                    <select class="form-control" required name="city">
+                    <select class="form-control" required name="city_id">
                         <option hidden value="">Одбери Град</option>
                         @foreach($cities as $city)
                             <option value="{{$city->id}}">{{$city->name}}</option>

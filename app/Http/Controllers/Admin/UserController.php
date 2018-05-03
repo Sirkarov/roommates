@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\DAL\User\UserRepository;
 use App\Models\GenderType;
 use App\Models\Role;
 use App\Models\City;
@@ -16,9 +17,18 @@ use View;
 
 class UserController extends Controller
 {
+    private $userRepository;
+
+    public function __construct(
+        UserRepository $userRepository
+    )
+    {
+        $this->userRepository = $userRepository;
+    }
+
     public function list()
     {
-        $users= User::all();
+        $users = $this->userRepository->all();
         return view('admin.users.list', compact("users"));
     }
     public function create()
@@ -31,24 +41,26 @@ class UserController extends Controller
     }
     public  function store(Request $request)
     {
-        //Create a new post using the request data , Save it to the database , And redirect somewhere in the application
-        $user = new User;
-        $user->name = $request->get('name');
-        $user->surname = $request->get('surname');
-        $user->gender_type_id = $request->get('gender');
-        $user->role_id = $request->get("role");
-        $user->email = $request->get('email');
-        $user->years = $request->get('years');
-        $user->city_id = $request->get('city');
-        $user->phone = $request->get('phone');
-        $user->description = $request->get('description');
-        $user->facebook = $request->get('facebook');
-        $user->twitter = $request->get('twitter');
-        $user->image = "default";
-        $user->password = "default";
 
-        #Save it to the database
-        $user->save();
+        $this->userRepository->create($request->all());
+        //Create a new post using the request data , Save it to the database , And redirect somewhere in the application
+//        $user = new User;
+//        $user->name = $request->get('name');
+//        $user->surname = $request->get('surname');
+//        $user->gender_type_id = $request->get('gender');
+//        $user->role_id = $request->get("role");
+//        $user->email = $request->get('email');
+//        $user->years = $request->get('years');
+//        $user->city_id = $request->get('city');
+//        $user->phone = $request->get('phone');
+//        $user->description = $request->get('description');
+//        $user->facebook = $request->get('facebook');
+//        $user->twitter = $request->get('twitter');
+//        $user->image = "default";
+//        $user->password = "default";
+//
+//        #Save it to the database
+//        $user->save();
 
         #And redirect somewhere in the application
         return redirect('admin/users')->with(['success'=>'succesfully added']);
