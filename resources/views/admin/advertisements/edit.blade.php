@@ -8,21 +8,25 @@
         </div>
         <!-- /.box-header -->
         <!-- form start -->
-        <form role="form" method="POST" action="{{route('admin.advertisements.store')}}">
+        <form role="form" method="POST" action="{{route('admin.advertisements.update',$advertisement->id)}}">
             <div class="box-body">
                 <div class="form-group">
                     <label for="exampleInputName1">Огласувач</label>
                     <select required class="form-control" name="user">
-                        <option hidden value="" name="">Избери Корисник</option>
+                        <option hidden value="{{$advertisement->user_id}}" name="">{{$advertisement->user->name}} {{$advertisement->user->surname}}</option>
                         @foreach($users as $user)
                             <option value="{{$user->id}}">{{$user->name}} {{$user->surname}}</option>
                         @endforeach
                     </select>
                 </div>
                 <div class="form-group">
+                    <label for="exampleInputName1">Име на Оглас</label>
+                    <input class="form-control" type="text" required value="{{$advertisement->name}}" name="name">
+                </div>
+                <div class="form-group">
                     <label for="exampleInputName1">Тип на Оглас</label>
                     <select required  class="form-control" name="adv-type">
-                        <option hidden value="">Избери тип на Оглас</option>
+                        <option hidden value="{{$advertisement->adv_type_id}}">{{$advertisement->advertisementType->type}}</option>
                         @foreach($advertisement_types as $type)
                             <option value="{{$type->id}}">{{$type->type}}</option>
                         @endforeach
@@ -31,7 +35,7 @@
                 <div class="form-group">
                     <label for="exampleInputName1">Град</label>
                     <select required  class="form-control" name="city">
-                        <option hidden value="">Избери Град</option>
+                        <option hidden value="{{$advertisement->city_id}}">{{$advertisement->city->name}}</option>
                         @foreach($cities as $city)
                             <option value="{{$city->id}}">{{$city->name}}</option>
                         @endforeach
@@ -39,20 +43,20 @@
                 </div>
                 <div class="form-group">
                     <label for="exampleInputName1">Координати</label>
-                    <input class="form-control" type="text" required placeholder="Внесете Координати" name="coordinates">
+                    <input class="form-control" type="text" required value="{{$advertisement->coordinates}}" name="coordinates">
                 </div>
                 <div class="form-group">
                     <label for="exampleInputName1">Опис</label>
-                    <textarea class="form-control" placeholder="Внесете Опис" name="description" rows="3"></textarea>
+                    <textarea class="form-control" value="{{$advertisement->description}}" name="description" rows="3">{{$advertisement->description}}</textarea>
                 </div>
                 <div class="form-group">
                     <label for="exampleInputName1">Улица</label>
-                    <input class="form-control" type="text" required placeholder="Внесете Улица" name="street">
+                    <input class="form-control" type="text" required value="{{$advertisement->street}}" name="street">
                 </div>
                 <div class="form-group">
                     <label for="exampleInputName1">Цимери</label>
                     <select required class="form-control" name="roommates">
-                        <option value="" hidden>Избери Број на Цимери</option>
+                        <option value="{{$advertisement->roommates}}" hidden>{{$advertisement->roommates}}</option>
                         <option value="1">1</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
@@ -63,7 +67,7 @@
                 <div class="form-group">
                     <label for="exampleInputName1">Греење</label>
                     <select required class="form-control" name="heating">
-                        <option hidden value="">Избери Греење</option>
+                        <option hidden value="{{$advertisement->advertisementType->id}}">{{$advertisement->advertisementType->type}}</option>
                         @foreach($heating_types as $type)
                             <option value="{{$type->id}}">{{$type->type}}</option>
                         @endforeach
@@ -71,12 +75,12 @@
                 </div>
                 <div class="form-group">
                     <label for="exampleInputName1">Квадратура</label>
-                    <input class="form-control" type="text" required placeholder="Внесете Големина" name="size">
+                    <input class="form-control" type="text" required value="{{$advertisement->size}}" name="size">
                 </div>
                 <div class="form-group">
                     <label for="exampleInputName1">Тип на Објект</label>
                     <select required class="form-control" name="apartment-type">
-                        <option hidden value="">Избери Објект</option>
+                        <option hidden value="{{$advertisement->apartmentType->id}}">{{$advertisement->apartmentType->type}}</option>
                         @foreach($apartment_types as $type)
                             <option value="{{$type->id}}">{{$type->type}}</option>
                         @endforeach
@@ -84,7 +88,7 @@
                 </div>
                 <div class="form-group">
                     <label>Цена</label>
-                    <input class="form-control" type="text" required placeholder="Внесете Цена" name="price">
+                    <input class="form-control" type="text" required value="{{$advertisement->price}}" name="price">
                 </div>
                 <div class="form-group">
                     <label>Карактеристики на Објектот</label><br>
@@ -100,7 +104,7 @@
             <!-- /.box-body -->
             <div class="box-footer buttons">
                 <a class="btn btn-block btn-info btn-sm fa fa-times" href="{{route('admin.advertisements.list')}}"  style="display:inline"> Откажи</a>
-                <button type="submit" required class="btn btn-success fa fa-check" style="display:inline"> Додади</button>
+                <button type="submit" required class="btn btn-success fa fa-check" style="display:inline"> Зачувај</button>
             </div>
         </form>
         <!-- form end  -->

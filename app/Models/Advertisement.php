@@ -27,7 +27,7 @@ class Advertisement extends Model
     }
     public function apartmentType()
     {
-        return $this->belongsTo(ApartmentType::class,"city_id","id");
+        return $this->belongsTo(ApartmentType::class,"apartment_type_id","id");
     }
     public function characteristics()
     {

@@ -12,4 +12,5 @@ class EloquentUser extends EloquentRepositoryImpl implements UserRepository
     {
         parent::__construct($user);
     }
+
 }

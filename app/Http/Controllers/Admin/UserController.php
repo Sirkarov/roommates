@@ -127,8 +127,8 @@ class UserController extends Controller
         return redirect('admin/users')->with(['success'=>'succesfully added']);
     }
 
-    public function delete(Request $request){
-
+    public function delete(Request $request)
+    {
         $user=User::find($request->get("id"));
         $user->delete();
 

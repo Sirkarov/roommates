@@ -12,7 +12,10 @@
 */
 
 Route::get('/', 'Front\IndexController@home');
-Route::get('/login', 'Auth\LoginController@login');
+//Route::get('/login', 'Auth\LoginController@login');
 Route::get('/add-listing', 'Front\AddListingController@addListing');
 Route::get('/register', 'Front\RegisterController@register');
 Route::get('/listing', 'Front\ListingController@listings');
+
+Auth::routes();
+

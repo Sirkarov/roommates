@@ -2,7 +2,9 @@
 @section('content')
     <div class="user-form-block">
         <div class="container">
-            <h1>Hellloooo</h1>
+            @foreach($advertisements as $advertisement)
+                {{$advertisement -> name}}
+                @endforeach
         </div>
     </div>
     @endsection

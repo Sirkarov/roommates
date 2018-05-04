@@ -6,7 +6,9 @@
     </div>
     <!-- /.box-header -->
     <div class="box-body">
-            <div class="col-sm-1"><a class="btn btn-success" href={{asset('/admin/advertisements/create')}}>Додади нов Оглас</a></div>
+            <div class="col-sm-1">
+                <a class="btn btn-success" href={{asset('/admin/advertisements/create')}}>Додади нов Оглас</a>
+            </div>
         <form role="form" method="POST" action="{{route('admin.advertisements.testStore')}}">
             <button type="submit" class="btn btn-warning" style="margin-left:20px">ДОДАДИ ТЕСТ ОГЛАС</button>
         </form>
@@ -31,28 +33,31 @@
                             <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="CSS grade: activate to sort column ascending" style="width: 191px;"></th>
                         </tr>
                         </thead>
-                        <tbody>
-                        @foreach($advertisements as $advertisemet)
+                        <tbody id="Click">
+                        @foreach($advertisements as $advertisement)
                             <tr role="row" class="odd">
-                                <td class="sorting_1">{{$advertisemet->id}}</td>
-                                <td>{{$advertisemet->user->name}} <br> {{$advertisemet->user->surname}}</td>
-                                <td class="sorting_1">{{$advertisemet->name}}</td>
-                                <td>{{$advertisemet->advertisementType->type}}</td>
-                                <td>{{$advertisemet->city->name}}</td>
-                                <td>{{$advertisemet->coordinates}}</td>
-                                <td>{{$advertisemet->street}}</td>
-                                <td>{{$advertisemet->description}}</td>
-                                <td>{{$advertisemet->roommates}}</td>
-                                <td>{{$advertisemet->heatingType->type}}</td>
-                                <td>{{$advertisemet->size}}</td>
-                                <td>{{$advertisemet->price}}</td>
-                                <td>{{$advertisemet->active}}</td>
+                                <td class="sorting_1">{{$advertisement->id}}</td>
+                                <td>{{$advertisement->user->name}} <br> {{$advertisement->user->surname}}</td>
+                                <td class="sorting_1">{{$advertisement->name}}</td>
+                                <td>{{$advertisement->advertisementType->type}}</td>
+                                <td>{{$advertisement->city->name}}</td>
+                                <td>{{$advertisement->coordinates}}</td>
+                                <td>{{$advertisement->street}}</td>
+                                <td>{{$advertisement->description}}</td>
+                                <td>{{$advertisement->roommates}}</td>
+                                <td>{{$advertisement->heatingType->type}}</td>
+                                <td>{{$advertisement->size}}</td>
+                                <td>{{$advertisement->price}}</td>
+                                <td>{{$advertisement->active}}</td>
                                 <td>
-                                    <a class="btn btn-block btn-warning btn-sm"  href="{{route('admin.advertisements.edit', $advertisemet->id )}}">Edit</a>
+                                    <a class="btn btn-block btn-warning btn-sm"  href="{{route('admin.advertisements.edit', $advertisement->id )}}">Edit</a>
                                 </td>
                                 <td>
-                                    <a class="btn btn-block btn-danger delete-button btn-sm" data-id="{{$advertisemet->id}}" data-token="{{csrf_token()}}" data-url="{{route('admin.advertisements.delete')}}">Delete
-                                    </a>
+                                    <form role="form" method="POST" action="{{route('admin.advertisements.delete', $advertisement->id)}}">
+                                        {{csrf_field()}}
+                                        <input type="hidden" name="_method" value="DELETE">
+                                        <button class="btn btn-block btn-danger btn-sm">Delete</button>
+                                    </form>
                                 </td>
                             </tr>
                         @endforeach</tbody>
